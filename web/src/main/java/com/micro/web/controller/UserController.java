@@ -1,4 +1,4 @@
-package com.micro.controller;
+package com.micro.model.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
-public class HelloWorldController {
+public class UserController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(ModelMap model) {
@@ -19,6 +19,7 @@ public class HelloWorldController {
     public String sayHelloAgain(ModelMap model) {
         model.addAttribute("greeting", "Hello World Again, from Spring 4 MVC");
         return "welcome";
+
     }
 
 }

@@ -1,4 +1,4 @@
-package com.micro;
+package com.micro.model;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

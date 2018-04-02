@@ -1,4 +1,4 @@
-package com.micro;
+package com.micro.model;
 
 /**
  * Hello world!

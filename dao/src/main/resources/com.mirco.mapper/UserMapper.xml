@@ -4,23 +4,5 @@
     <resultMap id="BaseResultMap" type="com.micro.model.User">
         <id column="id" jdbcType="VARCHAR" property="id" />
         <result column="name" jdbcType="VARCHAR" property="name" />
-        <result column="shop_id" jdbcType="VARCHAR" property="shopId" />
-        <result column="type" jdbcType="SMALLINT" property="type" />
-        <result column="probability" jdbcType="NUMERIC" property="probability" />
-        <result column="apportion_mode" jdbcType="SMALLINT" property="apportionMode" />
-        <result column="photo_url" jdbcType="VARCHAR" property="photoUrl" />
-        <result column="small_photo_url" jdbcType="VARCHAR" property="smallPhotoUrl" />
-        <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
-        <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
-        <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
-        <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
-        <result column="shop_mall_id" jdbcType="VARCHAR" property="shopMallId" />
-        <result column="weight" jdbcType="BIGINT" property="weight" />
-        <result column="status" jdbcType="SMALLINT" property="status" />
-        <result column="market_activity_id" jdbcType="VARCHAR" property="marketActivityId" />
-        <result column="put_start_time" jdbcType="VARCHAR" property="putStartTime" />
-        <result column="put_end_time" jdbcType="VARCHAR" property="putEndTime" />
-        <result column="limit_period" jdbcType="SMALLINT" property="limitPeriod" />
-        <result column="limit_times" jdbcType="BIGINT" property="limitTimes" />
     </resultMap>
 </mapper>

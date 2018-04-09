@@ -1,14 +1,12 @@
-package com.micro.model.impl;
+package com.micro.service.impl;
 
+import com.micro.dao.UserMapper;
 import com.micro.model.User;
-import com.micro.model.UserMapper;
-import com.micro.model.UserServic;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.micro.service.UserService;
 
 import java.util.List;
 
-public class UserServiceImpl implements UserServic {
-    @Autowired
+public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     public List<User> findAll() {

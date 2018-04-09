@@ -1,9 +1,10 @@
-package com.micro.dao;
+package com.micro.service;
+
 
 import com.micro.model.User;
 
 import java.util.List;
 
-public interface UserMapper {
+public interface UserService {
     List<User> findAll();
 }

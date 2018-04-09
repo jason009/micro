@@ -1,4 +1,4 @@
-package com.micro.model.controller;
+package com.micro.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

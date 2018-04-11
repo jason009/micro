@@ -4,14 +4,14 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class MicroWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Class<?>[] getRootConfigClasses() {
-        return new Class<?>[] { MicroAppConfig.class };
+        return new Class<?>[]{MicroAppConfig.class};
     }
 
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] { MicroWebConfig.class };
+        return new Class<?>[]{MicroWebConfig.class};
     }
 
     protected String[] getServletMappings() {
-        return new String[] { "/*" };
+        return new String[]{"/"};
     }
 }

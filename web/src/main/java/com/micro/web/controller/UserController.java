@@ -16,9 +16,9 @@ public class UserController {
 
     @GetMapping("/list")
     public @ResponseBody
-    String getUseres() {
+    User getUseres() {
         User user = userService.getById(1);
-        return "hello word";
+        return user;
     }
 
 }

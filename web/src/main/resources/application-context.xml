@@ -67,7 +67,7 @@
         <!-- cn.acheng1314是我的应用程序的包名,你们需要使用你们自己的包名,也就是前面我们提到过的GroupId -->
         <property name="typeAliasesPackage" value="com.micro.model"/>
         <!-- 扫描sql配置文件:mapper需要的xml文件 -->
-        <property name="mapperLocations" value="classpath*:com/micro/mapper/*.xml"/>
+        <property name="mapperLocations" value="classpath*:config/mapper/*.xml"/>
     </bean>
 
     <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->

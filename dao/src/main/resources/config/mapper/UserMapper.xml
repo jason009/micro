@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.micro.dao.UserMapper">
     <resultMap id="BaseResultMap" type="com.micro.model.User">
-        <id column="id" jdbcType="VARCHAR" property="id" />
+        <id column="id" jdbcType="INTEGER" property="id" />
         <result column="name" jdbcType="VARCHAR" property="name" />
     </resultMap>
-    <select id="getById" parameterType="int" resultType="BaseResultMap">
+    <select id="getById" parameterType="int" resultMap="BaseResultMap">
         select id,name from user where id=#{id}
     </select>
 </mapper>

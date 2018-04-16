@@ -90,9 +90,9 @@
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
-            <resource>
+            <!--<resource>
                 <directory>../dao/src/main/resources</directory>
-            </resource>
+            </resource>-->
         </resources>
     </build>
 </project>

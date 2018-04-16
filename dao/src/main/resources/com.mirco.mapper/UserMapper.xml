@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.micro.model.UserMapper">
+<mapper namespace="com.micro.dao.UserMapper">
     <resultMap id="BaseResultMap" type="com.micro.model.User">
         <id column="id" jdbcType="VARCHAR" property="id" />
         <result column="name" jdbcType="VARCHAR" property="name" />
     </resultMap>
+    <select id="getById" parameterType="int" resultType="BaseResultMap">
+        select id,name from user where id=#{id}
+    </select>
 </mapper>

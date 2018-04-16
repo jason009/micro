@@ -9,13 +9,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
-
-    <!-- 配置整合mybatis过程 -->
-    <!-- 1.配置数据库相关参数properties的属性：${url} -->
+    <context:component-scan base-package="com.micro" />
     <!-- 使用数据库配置文件解耦 -->
     <context:property-placeholder location="classpath:jdbc.properties"/>
 
-    <!-- 下面的druid配置都是基本配置,具体优化设置可以上网查询,也可以去github上面直接搜索druid -->
     <!-- 2.数据库连接池 -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
           init-method="init" destroy-method="close">
@@ -68,9 +65,9 @@
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!-- 扫描entity包 使用别名 -->
         <!-- cn.acheng1314是我的应用程序的包名,你们需要使用你们自己的包名,也就是前面我们提到过的GroupId -->
-        <property name="typeAliasesPackage" value="cn.acheng1314.domain"/>
+        <property name="typeAliasesPackage" value="com.micro.model"/>
         <!-- 扫描sql配置文件:mapper需要的xml文件 -->
-        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+        <property name="mapperLocations" value="classpath*:com/micro/mapper/*.xml"/>
     </bean>
 
     <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
@@ -78,12 +75,8 @@
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <!-- 给出需要扫描Dao接口包 -->
-        <property name="basePackage" value="cn.acheng1314.dao"/>
+        <property name="basePackage" value="com.micro.dao"/>
     </bean>
-    <!-- 扫描service包下所有使用注解的类型 -->
-    <!-- cn.acheng1314为我们应用的包名,当然也是我们前面提到过的GroupId -->
-    <context:component-scan base-package="com.micro" />
-
     <!-- 配置事务管理器 -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

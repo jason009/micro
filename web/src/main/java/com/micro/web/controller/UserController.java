@@ -15,10 +15,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/list")
-    public @ResponseBody
-    User getUseres() {
+    @ResponseBody
+    public User getUsers() {
         User user = userService.getById(1);
         return user;
     }
-
 }
